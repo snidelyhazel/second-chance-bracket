@@ -63,7 +63,7 @@
 
           if (responseData.authenticated_successfully)
           {
-            window.location = "/home/";
+            window.location = "/";
           }
           else
           {
