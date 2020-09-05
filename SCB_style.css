@@ -1,0 +1,298 @@
+/*
+  Color Scheme:
+  Black (#000000)
+  Weldon Blue (#8394A1)
+  Cadet Grey (#95A3AE)
+  Light Silver (#D1D7DB)
+  White (#FFFFFF)
+*/
+
+body
+{
+  background-color: black;
+  color: #D1D7DB;
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+header
+{
+  background: linear-gradient(to top, black, #8394A1);
+}
+
+h1, h2, h3
+{
+  font-family: Georgia, serif;
+}
+
+main
+{
+  margin-top: 150px;
+}
+
+main, section
+{
+  margin-bottom: 50px;
+}
+
+main > h1, main > h2, main > h3, main > p, main > ol, main > ul, main > form, main > table
+{
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+
+ol
+{
+  padding-left: 40px;
+}
+
+ul
+{
+  padding-left: 60px;
+}
+
+nav ul
+{
+  list-style: none;
+  padding: 0;
+}
+
+li
+{
+  margin: 1em 0;
+}
+
+a
+{
+  color: #95A3AE;
+  text-decoration: none;
+}
+
+.signup-form
+{
+  background: linear-gradient(to top, black, #8394A1, black);
+  padding: 60px;
+}
+
+.fine-print
+{
+  font-size: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.fadediv
+{
+  height: 3px;
+  background: linear-gradient(to right, black, #D1D7DB, black);
+  margin: 7vh 5vw;
+}
+
+.bracket
+{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "wcf scf ecf";
+}
+
+.bracket #wcfDiv, .bracket #ecfDiv
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.bracket #wcfDiv, .bracket #ecfDiv, .bracket #scfDiv
+{
+  text-align: center;
+}
+
+.bracket #wcfDiv
+{
+  grid-area: wcf;
+}
+.bracket #scfDiv
+{
+  grid-area: scf;
+}
+.bracket #ecfDiv
+{
+  grid-area: ecf;
+}
+
+.bracket input[type="radio"]
+{
+  position: absolute;
+  opacity: 0;
+}
+
+.bracket input[type="radio"]:checked + img
+{
+  background: #95A3AE;
+}
+
+.logo
+{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  box-sizing: border-box;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.logo-small
+{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+.bracket input[type="radio"]:not([disabled]) + img:hover
+{
+  cursor: pointer;
+  border: 2px solid #95A3AE;
+  padding: 4px;
+}
+
+.score-table
+{
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 2px solid #95A3AE;
+}
+
+.padding-top
+{
+  padding-top: 10px;
+}
+
+.border-bottom
+{
+  border-bottom: 2px solid #95A3AE;
+  padding-bottom: 10px;
+}
+
+
+
+.nav-logo
+{
+  width: 200px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+header
+{
+  display: flex;
+  height: 50px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  align-items: start;
+}
+
+nav
+{
+  display: flex;
+  flex-grow: 1;
+}
+
+.topnav
+{
+  display: inline-flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+nav a
+{
+  float: left;
+  display: flex;
+  color: var(--brand-silver);
+  text-align: center;
+  align-items: center;
+  height: 48px;
+  padding: 0 30px;
+  text-decoration: none;
+}
+
+nav a:hover
+{
+  background-color: #D1D7DB;
+  color: black;
+}
+
+nav .active
+{
+  background-color: #95A3AE;
+  color: black;
+}
+
+nav a.icon
+{
+  display: none;
+  flex-shrink: 0;
+  padding: 0;
+  width: 48px;
+  justify-content: center;
+}
+
+/* Responsive Navigation w3schools.com/howto/howto_js_topnav_responsive.asp */
+@media screen and (max-width: 600px)
+{
+  .nav-logo
+  {
+    width: 100px;
+  }
+
+  header
+  {
+    height: auto;
+  }
+
+  .topnav
+  {
+    flex-direction: column;
+  }
+
+  .topnav a:not(.active)
+  {
+    display: none;
+  }
+
+  nav a.icon
+  {
+    display: flex;
+  }
+
+  .topnav.responsive
+  {
+    position: relative;
+  }
+
+  .topnav.responsive a
+  {
+    float: none;
+    display: flex;
+    text-align: left;
+  }
+}
+
+footer
+{
+  /* width + padding + border = actual visible, rendered width; css-tricks.com/box-sizing/ */
+  box-sizing: border-box;
+  padding: 5px 5px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background: black;
+}
