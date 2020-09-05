@@ -189,7 +189,7 @@
           }
           else
           {
-            window.location = "/home/";
+            window.location = "/";
           }
         });
 
