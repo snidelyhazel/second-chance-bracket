@@ -72,6 +72,10 @@
             <input type="radio" name="ecf_champ" value="NYI" required/>
             <img class="logo" src="/logos/NYI.svg"/>
           </label>
+          <label>
+            <input type="radio" name="ecf_champ" value="PHI" required/>
+            <img class="logo" src="/logos/PHI.svg"/>
+          </label>
           <div>
             <select name="ecf_games" id="ecf_games" required>
               <option> </option>
@@ -167,6 +171,7 @@
           DAL: "Dallas Stars",
           TBL: "Tampa Bay Lightning",
           NYI: "New York Islanders",
+          PHI: "Philadelphia Flyers",
         }[champ] + " are your 2020 Stanley Cup Champions!";
       }
 
