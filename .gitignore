@@ -3,3 +3,6 @@
 
 # Third-party files
 vendor
+
+#SendGrid API Key
+sendgridapikey.txt

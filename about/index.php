@@ -13,7 +13,12 @@
   <?php include("../includes/SCB_nav.php");?>
   <main>
     <h1>About the Second-Chance Bracket Challenge!</h1>
-    <h3>Coming Soon!</h3>
+    <h3>The Second-Chance Bracket Challenge is brought to you by <a href="http://ashleyzeldin.com">Ashley Zeldin</a> and <a href="http://johnnesky.com">John Nesky</a>.</h3>
+    <p>She likes hockey, he doesn't.</p>
+    <p>But his bracket is outperforming hers in the NHL Bracket Challenge, so she decided she needed a redo.</p>
+    <p>Enter the Second-Chance Bracket Challenge, for those of us who got it wrong!</p>
+    <br/>
+    <p>Fun fact! All the teams with C names, whether their city (Calgary, Carolina, Chicago, Colorado, Columbus) or their collective (Canadiens, Canucks, Capitals, Coyotes), are out of contention as of the 2nd round!</p>
   </main>
   <?php include("../includes/SCB_footer.php");?>
 </body>
