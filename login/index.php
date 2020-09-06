@@ -23,7 +23,7 @@
             <label for="username_or_email">Enter username or email:</label>
           </td>
           <td>
-            <input type="text" name="username_or_email" id="username_or_email" placeholder="username or email@domain.com" style="margin: 3px;">
+            <input type="text" name="username_or_email" id="username_or_email" placeholder="username or email@domain.com" style="margin: 3px;" required>
           </td>
         </tr>
         <tr>
@@ -31,7 +31,7 @@
             <label for="password">Enter password:</label>
           </td>
           <td>
-            <input type="password" name="password" id="password" placeholder="password" style="margin: 3px;">
+            <input type="password" name="password" id="password" placeholder="password" style="margin: 3px;" required>
           </td>
         </tr>
         <tr>
@@ -43,7 +43,7 @@
         </tr>
       </table>
     </form>
-    <p>Did you forget your password? Retrieval coming soon!</p>
+    <p>Did you forget your password? Enter your username or email then <a id="forgotLink" href="javascript:void(0);">click here</a> and you should receive an email to reset your password.</p>
 
     <div id="warning" style="color: red;"></div>
 
@@ -74,6 +74,34 @@
 
             warning.innerHTML += "The combination of login information provided is incorrect. <br/>If you do not already have a Second-Chance Bracket account, please <a href='/join/'>create an account</a>.";
           }
+        });
+
+        request.addEventListener("error", function(event)
+        {
+          alert("I'm sorry, the server might be down.");
+          console.log('HTTP error', request.status, request.statusText);
+        });
+        // start request
+        request.send(new FormData(loginForm));
+      });
+
+      var forgotLink = document.getElementById("forgotLink");
+      forgotLink.addEventListener("click", function() {
+        event.preventDefault();
+        if (loginForm.username_or_email.value == "")
+        {
+          warning.innerHTML = "Please enter a username or email to reset your password.";
+          return;
+        }
+
+        var request = new XMLHttpRequest();
+        request.open('POST', '/login/forgotpassword.php');
+        // Define what happens on successful data submission
+        request.addEventListener("load", function(event)
+        {
+          // var responseData = JSON.parse(request.responseText);
+          var warning = document.getElementById("warning");
+          warning.innerHTML = "If you have an account, a link to reset your password should be sent to the email address you used during signup shortly.";
         });
 
         request.addEventListener("error", function(event)

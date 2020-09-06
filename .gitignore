@@ -1,8 +1,10 @@
 # Admin
 .htaccess
+includes/SCB_admininfo.php
 
 # Third-party files
 vendor
 
 #SendGrid API Key
 sendgridapikey.txt
+sendgrid/
