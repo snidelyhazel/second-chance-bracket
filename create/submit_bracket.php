@@ -1,6 +1,9 @@
 <?php
 include("../includes/SCB_connect.php");
 
+echo(json_encode(array("bracket_locked"=>true)));
+
+/*
 if ($db === FALSE)
 {
     echo "<p>Unable to connect to the database server.</p>" . "<p>Error code " . mysqli_errno() . ": " . mysqli_error() . "</p>";
@@ -73,4 +76,5 @@ else
     // Not logged in.
   }
 }
+*/
 ?>
