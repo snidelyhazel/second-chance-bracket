@@ -29,18 +29,23 @@
       <div class="bracket">
         <div id="wcfDiv">
           <div>
+            <!--
             <img class="logo" src="/logos/NHL_Western_Conference.svg"/>
+            -->
           </div>
           <div>
+            <!--
             Western Conference Final
+            -->
+            Semifinal 1
           </div>
           <label>
             <input type="radio" name="wcf_champ" value="VGK" required/>
             <img class="logo" src="/logos/VGK.svg"/>
           </label>
           <label>
-            <input type="radio" name="wcf_champ" value="DAL" required/>
-            <img class="logo" src="/logos/DAL.svg"/><!-- or COL? -->
+            <input type="radio" name="wcf_champ" value="MON" required/>
+            <img class="logo" src="/logos/MON.svg"/>
           </label>
           <div>
             <select name="wcf_games" id="wcf_games" required>
@@ -55,10 +60,15 @@
         </div>
         <div id="ecfDiv">
           <div>
+            <!--
             <img class="logo" src="/logos/NHL_Eastern_Conference.svg"/>
+            -->
           </div>
           <div>
+            <!--
             Eastern Conference Final
+            -->
+            Semifinal 2
           </div>
           <!-- <label>
             <input type="radio" name="ecf_champ" value="PHI"/>
@@ -85,7 +95,10 @@
         </div>
         <div id="scfDiv">
           <div>
+            <!--
             <img style="height: 100px;" src="/logos/section-prizing-nhl-game.png"/>
+            -->
+            <img style="height: 100px;" src="/logos/2021_Stanley_Cup_playoffs_logo.svg"/>
           </div>
           <div>
             Stanley Cup Final
@@ -163,11 +176,39 @@
         if (champ == "") return;
         outcomeMessage.textContent = "The " +
         {
-          VGK: "Vegas Golden Knights",
+          ANA: "Anaheim Ducks",
+          ARI: "Arizona Coyotes",
+          BOS: "Boston Bruins",
+          BUF: "Buffalo Sabres",
+          CGY: "Calgary Flames",
+          CAR: "Carolina Hurricanes",
+          CHI: "Chicago Blackhawks",
+          COL: "Colorado Avalanche",
+          CBJ: "Columbus Blue Jackets",
           DAL: "Dallas Stars",
-          TBL: "Tampa Bay Lightning",
+          DET: "Detroit Red Wings",
+          EDM: "Edmonton Oilers",
+          FLA: "Florida Panthers",
+          LAK: "Los Angeles Kings",
+          MIN: "Minnesota Wild",
+          MTL: "Montreal Canadiens",
+          NSH: "Nashville Predators",
+          NJD: "New Jersey Devils",
           NYI: "New York Islanders",
-        }[champ] + " are your 2020 Stanley Cup Champions!";
+          NYR: "New York Rangers",
+          OTT: "Ottawa Senators",
+          PHI: "Philadelphia Flyers",
+          PIT: "Pittsburgh Penguins",
+          SJS: "San Jose Sharks",
+          SEA: "Seattle Kraken",
+          STL: "St. Louis Blues",
+          TBL: "Tampa Bay Lightning",
+          TOR: "Toronto Maple Leafs",
+          VAN: "Vancouver Canucks",
+          VGK: "Vegas Golden Knights",
+          WSH: "Washington Capitals",
+          WPG: "Winnipeg Jets",
+        }[champ] + " are your 2021 Stanley Cup Champions!";
       }
 
       bracketForm.addEventListener("submit", function()
