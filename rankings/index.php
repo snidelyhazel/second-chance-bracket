@@ -36,7 +36,11 @@
         $previous_year = $year - 1;
         $season = $previous_year . $year;
 
-        $result = file_get_contents("http://statsapi.web.nhl.com/api/v1/schedule?season=" . $season . "&gameType=P&startDate=2020-08-11&endDate=2020-10-05");
+        // Update these dates for each season.
+        $playoff_start_and_end_dates = "&startDate=2021-05-16&endDate=2021-09-01"
+        // The URL should be something like: https://statsapi.web.nhl.com/api/v1/schedule?season=20202021&gameType=P&startDate=2021-05-16&endDate=2021-09-01
+
+        $result = file_get_contents("http://statsapi.web.nhl.com/api/v1/schedule?season=" . $season . "&gameType=P" . $playoff_start_and_end_dates);
         $json = json_decode($result);
         $teams = array();
 
