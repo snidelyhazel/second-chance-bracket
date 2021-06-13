@@ -37,7 +37,7 @@
         $season = $previous_year . $year;
 
         // Update these dates for each season.
-        $playoff_start_and_end_dates = "&startDate=2021-05-16&endDate=2021-09-01"
+        $playoff_start_and_end_dates = "&startDate=2021-05-16&endDate=2021-09-01";
         // The URL should be something like: https://statsapi.web.nhl.com/api/v1/schedule?season=20202021&gameType=P&startDate=2021-05-16&endDate=2021-09-01
 
         $result = file_get_contents("http://statsapi.web.nhl.com/api/v1/schedule?season=" . $season . "&gameType=P" . $playoff_start_and_end_dates);
@@ -167,7 +167,7 @@
             }
             $total += $bonus_awarded;
           }
-          
+
           $rankings[] = array("rank"=>0, "username"=>$row["username"], "total"=>$total, "scf_champ"=>$scf_champ);
         }
 
